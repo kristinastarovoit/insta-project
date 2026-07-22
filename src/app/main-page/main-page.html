@@ -1,5 +1,5 @@
 <h1>Insta Mockup</h1>
-@for (item of postList; track postList) {
+@for (item of postList; track item.name) {
     <h2>{{item.name}}</h2>
     <img class="post_img"src="{{item.img}}">
     <p>Likes: {{item.likes}}</p>

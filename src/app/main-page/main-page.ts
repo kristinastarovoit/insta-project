@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Posts } from './posts';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-main-page',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './main-page.html',
   styleUrl: './main-page.scss',
 })

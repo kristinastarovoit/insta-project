@@ -1,6 +1,11 @@
 <h1>Insta Mockup</h1>
 @for (item of postList; track item.name) {
-    <h2>{{item.name}}</h2>
-    <img class="post_img"src="{{item.img}}">
-    <p>Likes: {{item.likes}}</p>
+<h2>{{item.name}}</h2>
+<img class="post_img" [src]="item.img">
+@if (item.isLiked){
+<img (click)="toggleLike(item)" src="img/heart-red.png">
+} @else if(!item.isLiked){
+<img (click)="toggleLike(item)" src="img/heart-black.png">
+}
+<p>Likes: {{item.likes}}</p>
 }
